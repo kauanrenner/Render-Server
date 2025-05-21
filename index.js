@@ -7,9 +7,23 @@ app.get('/', (req, res) => {
     res.send('Servidor on')
 })
 
-app.get('/led', (req, res) => {
+app.get('/led?estado=on', (req, res) => {
     const ans = {
         estado: 'ativado'
+    }
+    res.json(ans)
+})
+
+app.get('/led?estado=off', (req, res) => {
+    const ans = {
+        estado: 'desativado'
+    }
+    res.json(ans)
+})
+
+app.get('/led?estado=status', (req, res) => {
+    const ans = {
+        estado: 'status'
     }
     res.json(ans)
 })
