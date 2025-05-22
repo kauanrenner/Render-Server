@@ -34,7 +34,7 @@ app.get('/led=status', (req, res) => {
 })
 
 app.get('/commands', (req, res) => {
-    res.send("COMANDO ENVIADO")
+    res.json(comandos);
 })
 
 app.listen(port, () => {
