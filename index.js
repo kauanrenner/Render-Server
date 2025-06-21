@@ -4,7 +4,7 @@ const app = express()
 const port = process.env.PORT || 3000;
 
 let comandos = {};
-let horario = {};
+let corpo = {};
 
 app.get('/', (req, res) => {
     res.send('Servidor on')
@@ -38,9 +38,13 @@ app.get('/commands', (req, res) => {
     res.json(comandos);
 })
 
-app.get('/horario=cliente', (req, res) => {
-    console.log(req.body)
+app.get('/cliente', (req, res) => {
+    corpo = req.query
     res.send('Atualizado')
+})
+
+app.get('/arduino', (req, res) => {
+    res.send(corpo.horario)
 })
 
 app.listen(port, () => {
