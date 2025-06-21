@@ -39,8 +39,7 @@ app.get('/commands', (req, res) => {
 })
 
 app.get('/horario=cliente', (req, res) => {
-    horario = req.body
-    console.log(horario)
+    console.log(req.body)
     res.send('Atualizado')
 })
 
