@@ -44,7 +44,7 @@ app.get('/cliente', (req, res) => {
 })
 
 app.get('/arduino', (req, res) => {
-    res.send(corpo.horario)
+    res.send(corpo)
 })
 
 app.listen(port, () => {
