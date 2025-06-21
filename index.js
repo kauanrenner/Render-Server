@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 
 app.get('/led=on', (req, res) => {
     const ans = {
-        estado: 'ativado'
+        estado: 'Aberto'
     }
     res.json(ans)
     comandos.Comando = 'ON'
@@ -20,7 +20,7 @@ app.get('/led=on', (req, res) => {
 
 app.get('/led=off', (req, res) => {
     const ans = {
-        estado: 'desativado'
+        estado: 'Fechado'
     }
     res.json(ans)
     comandos.Comando = 'OFF'
